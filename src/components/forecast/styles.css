@@ -1,0 +1,90 @@
+.custom-button {
+  background-color: #457ea3 !important;
+  color: white !important;
+  transition: background-color 0.3s ease-in-out;
+  width: 150px;
+  border-radius: 6px;
+  padding: 6px 12px;
+}
+
+.mantine-ScrollArea-root {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.mantine-Table-root tr {
+  height: 58px; 
+}
+
+.button-group {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.save-btn{
+  background-color: green;
+  font-size: 12px;
+  padding: 0;
+}
+.cancel-btn{
+  background-color: grey;
+  font-size: 12px;
+  padding: 0;
+}
+.edit-btn {
+  background-color: #f1c40f !important;
+  color: black !important;
+  padding: 3px 10px !important;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.delete-btn {
+  background-color: #e74c3c !important;
+  color: white !important;
+  padding: 3px 10px !important;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+
+.mantine-Table-root td {
+  text-align: center;
+  font-size: 14px;
+  padding: 6px 8px;
+}
+
+.mantine-Table-root tr td {
+  height: 32px;
+}
+
+.small-input .mantine-Input-input {
+  font-size: 16px !important;
+  padding: 2px 6px !important;
+  text-align: center;
+  margin: 0 20px;
+  border: 1px solid lightsteelblue;
+}
+
+.mantine-Modal-content {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+}
+
+.mantine-Modal-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

@@ -1,46 +1,122 @@
-# Getting Started with Create React App
+# Frontend Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Overview
 
-## Available Scripts
+This is the frontend application for the weather forecasting system. It provides users with real-time weather data, user-generated forecasts, and historical temperature visualizations. The application is built using **React (TypeScript)** and utilizes **Mantine UI** for styling and components.
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- **Weather Widget**: Displays real-time weather data and user forecasts.
+- **Forecast Management**: Create, update, and delete forecasts.
+- **Temperature Visualization**: Graphical representation of historical and predicted temperatures.
+- **API Integration**: Fetches data from the backend via REST APIs.
+- **State Management**: Uses React Context API for city selection and API refetch triggers.
+- **Table Management**: Utilizes `mantine-react-table` for better UI/UX.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🛠️ Tech Stack
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **React (TypeScript)**: UI framework
+- **Mantine UI**: Component library
+- **TanStack React Query**: API data fetching and caching
+- **Axios**: HTTP client
+- **Recharts**: Graphs and charts
 
-### `npm test`
+## 📂 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+frontend/
+│-- src/
+│   │-- components/
+│   │   │-- Weather/
+│   │   │-- ForecastTable/
+│   │   │-- TemperatureChart/
+│   │-- context/
+│   │-- hooks/
+│   │-- api/
+│   │-- styles/
+│   │-- App.tsx
+│-- public/
+│-- .env
+│-- package.json
+│-- README.md
+```
 
-### `npm run build`
+## 🏗️ Setup & Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1️⃣ Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ensure you have the following installed:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Node.js** (v16+ recommended)
+- **Yarn** or **npm**
 
-### `npm run eject`
+### 2️⃣ Clone the Repository
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+git clone https://github.com/uendar/weather-app.git
+cd frontend
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3️⃣ Install Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sh
+yarn install
+# OR
+npm install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 4️⃣ Environment Variables
 
-## Learn More
+Create a `.env` file in the root directory and configure the following:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+REACT_APP_API_BASE_URL=http://localhost:8000
+REACT_APP_IPGEO_API_KEY=your_api_key
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 5️⃣ Start Development Server
+
+```sh
+yarn start
+# OR
+npm start
+```
+
+## 🐳 Docker Setup
+
+To run the frontend inside a Docker container:
+
+### 1️⃣ Build the Docker Image
+
+```sh
+docker build -t weather-frontend .
+```
+
+### 2️⃣ Run the Container
+
+```sh
+docker run -p 3000:3000 weather-frontend
+```
+
+## 📝 API Endpoints
+
+The application interacts with the following backend endpoints:
+
+### 🔹 Weather API
+
+- `GET /weather/{city}` - Fetches real-time weather data and user forecast
+
+### 🔹 Forecast API
+
+- `GET /forecasts?city={city}` - Fetches forecasts for a city
+- `POST /forecasts` - Creates a new forecast
+- `PUT /forecasts/{id}` - Updates an existing forecast
+- `DELETE /forecasts/{id}` - Deletes a forecast
+
+### 🔹 Temperature API
+
+- `GET /temperature/{city}?days={n}` - Fetches historical temperature data
+- `GET /temperature/{city}/download` - Downloads temperature data as CSV
+
+
+

@@ -1,0 +1,61 @@
+
+.mantine-Modal-content {
+  max-width: 400px;  
+  margin: auto;
+  border-radius: 12px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+  background-color: white; 
+}
+
+.mantine-Modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #457ea3; 
+  color: white;
+  font-weight: bold;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.mantine-Modal-title {
+  font-size: 1.2rem;
+}
+
+.mantine-Modal-body {
+  padding: 20px;
+}
+
+
+.mantine-TextInput-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.mantine-Button-root {
+  width: 100%;
+  background-color: #457ea3;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+
+}
+.mantine-Button-root:hover {
+  background-color: #457ea3;
+}
+
+.mantine-Modal-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+}
