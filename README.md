@@ -27,9 +27,6 @@ This is the frontend application for the weather forecasting system. It provides
 frontend/
 │-- src/
 │   │-- components/
-│   │   │-- Weather/
-│   │   │-- ForecastTable/
-│   │   │-- TemperatureChart/
 │   │-- context/
 │   │-- hooks/
 │   │-- api/
